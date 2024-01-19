@@ -4,7 +4,7 @@ export const TopicsContainer = styled.ul`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 32px 0 68px 0;
+  margin-top: 36px;
 `
 
 export const Topic = styled.li`

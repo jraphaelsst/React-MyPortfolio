@@ -13,6 +13,7 @@ import {
 
 import image from '../media/97398844.jpeg'
 
+import BackTopics from '../BackTopics'
 import Container from '../Container'
 import SectionHeader from '../SectionHeader'
 import FrontTopics from '../FrontTopics'
@@ -132,8 +133,9 @@ const About = () => {
               </Text>
             </Texts>
             <Title>How&rsquo;s my Back-end?</Title>
-            <FrontTopics />
+            <BackTopics />
             <Title>How&rsquo;s my Front-end?</Title>
+            <FrontTopics />
           </Presentation>
         </AboutContainer>
 
