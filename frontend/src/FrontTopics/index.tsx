@@ -9,7 +9,7 @@ const FrontTopics = () => {
         <Hexagon icon="fa-solid fa-gauge-high fa-3x" />
         <TopicTitle>Fast</TopicTitle>
         <TopicDescription>
-          Fast load times and lag free interaction, my highest priority
+          Fast load times and lag free interaction, one of my main priorities
         </TopicDescription>
       </Topic>
       <Topic>

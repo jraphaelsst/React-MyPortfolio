@@ -13,36 +13,15 @@ import {
 
 import image from '../media/97398844.jpeg'
 
+import { color } from '../styles'
 import BackTopics from '../BackTopics'
 import Container from '../Container'
-import SectionHeader from '../SectionHeader'
 import FrontTopics from '../FrontTopics'
-
-// type ReposType = {
-//   id: number
-//   name: string
-//   languages: string
-//   languages_url: string
-// }
-
-// type LanguagesType = {
-//   id: number
-//   repos: string
-//   languages: object
-// }
-
-// type LanguageType = {
-//   language: string
-//   size: number
-// }
 
 const About = () => {
   // const userUrl = 'https://api.github.com/users/jraphaelsst'
-  // const reposUrl = 'https://api.github.com/users/jraphaelsst/repos'
-  // const langUrl = 'https://api.github.com/repos/jraphaelsst/'
 
   // const [avatar, setAvatar] = useState('')
-  // const [repos, setRepos] = useState<ReposType[]>([])
 
   // Get Avatar
   // useEffect(() => {
@@ -57,62 +36,27 @@ const About = () => {
   //   }
   // }, [])
 
-  // Get Repos
-  // useEffect(() => {
-  //   try {
-  //     fetch(reposUrl)
-  //       .then((response) => response.json())
-  //       .then((res) => {
-  //         setRepos(res)
-  //       })
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // }, [])
-
-  // Fetch Languages
-  // const langs: LanguagesType[] = []
-
-  // repos.map((repo, index) => {
-  //   fetch(langUrl + repo.name + '/languages')
-  //     .then((response) => response.json())
-  //     .then((res) => {
-  //       console.log(res)
-  //       langs.push({
-  //         id: index,
-  //         repos: repo.name,
-  //         languages: res
-  //       })
-  //     })
-  // })
-
-  // const getLanguage = (langs: LanguageType[]) => {
-  //   const data = []
-
-  //   langs.map((lang: LanguageType) => {
-  //     data.push({
-  //       language: lang['language'],
-  //       size: lang['size']
-  //     })
-  //   })
-  // }
-
   return (
-    <Container>
+    <Container title="ABOUT" style={{ backgroundColor: `${color.bgPrimary}` }}>
       <>
-        <SectionHeader title="ABOUT" />
         <AboutContainer>
           <Presentation>
             <Image src={image} />
             <Icons>
               <Icon>
-                <i className="fa-brands fa-github fa-2x" />
+                <a href="">
+                  <i className="fa-brands fa-github fa-2x" />
+                </a>
               </Icon>
               <Icon>
-                <i className="fa-brands fa-whatsapp fa-2x" />
+                <a href="">
+                  <i className="fa-brands fa-whatsapp fa-2x" />
+                </a>
               </Icon>
               <Icon>
-                <i className="fa-brands fa-instagram fa-2x" />
+                <a href="">
+                  <i className="fa-brands fa-instagram fa-2x" />
+                </a>
               </Icon>
             </Icons>
             <Title>Who&rsquo;s this guy?</Title>
@@ -123,7 +67,7 @@ const About = () => {
               </Text>
               <Text>
                 Specialized in Back-end development, I have a serious passion
-                for writing performatic, well designed and secure architectures,
+                for writing performatic, well designed architectures, secure
                 database structures and scripting algorithms.
               </Text>
               <Text>
@@ -132,11 +76,11 @@ const About = () => {
                 animations and creating intuitive, dynamic user experiences.
               </Text>
             </Texts>
-            <Title>How&rsquo;s my Back-end?</Title>
-            <BackTopics />
-            <Title>How&rsquo;s my Front-end?</Title>
-            <FrontTopics />
           </Presentation>
+          <Title>How&rsquo;s my Back-end?</Title>
+          <BackTopics />
+          <Title>How&rsquo;s my Front-end?</Title>
+          <FrontTopics />
         </AboutContainer>
 
         {/* <div>

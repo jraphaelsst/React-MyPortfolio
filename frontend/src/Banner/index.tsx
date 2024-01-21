@@ -7,7 +7,7 @@ const Banner = () => {
         <Text>
           Hello, I&rsquo;m <Name>João Raphael</Name>.
         </Text>
-        <Text>I&rsquo;m a Full Stack Web Developer.</Text>
+        <Text>I&rsquo;m a Web Developer.</Text>
         <Button>
           Know my work <ArrowIcon className="fa-solid fa-arrow-right" />
         </Button>

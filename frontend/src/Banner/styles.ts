@@ -7,9 +7,13 @@ import { bgAnimation, fadeInButton, fadeInText } from './keyframes'
 export const Container = styled.section`
   width: 100%;
   height: 100vh;
-  background: linear-gradient(315deg, rgb(0, 0, 0) 0%, rgb(124, 143, 161) 170%);
-  background-size: 300% 300%;
-  animation: ${bgAnimation} 6s ease infinite;
+  background: linear-gradient(
+    315deg,
+    rgb(0, 0, 0) 0%,
+    rgba(20, 100, 180, 0.45) 220%
+  );
+  background-size: 400% 400%;
+  animation: ${bgAnimation} 6s ease-in-out infinite;
 
   display: flex;
   align-items: center;

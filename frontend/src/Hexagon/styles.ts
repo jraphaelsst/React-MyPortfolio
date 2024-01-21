@@ -32,5 +32,5 @@ export const Bottom = styled.div`
 `
 
 export const Icon = styled.i`
-  color: white;
+  color: ${color.bgPrimary};
 `

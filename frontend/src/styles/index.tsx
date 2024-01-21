@@ -2,8 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 
 export const color = {
   // Background colors
-  bgPrimary: '#f5',
-  bgSecondary: '#fff',
+  bgPrimary: '#cdcdcd',
+  bgSecondary: '#e2e1e1',
 
   // Font colors
   fontPrimary: '#446',
@@ -11,6 +11,7 @@ export const color = {
   fontAlternative: '#ddd',
 
   // Main colors
+  main: '#101215',
   primary: 'rgb(27, 36, 47)',
   secondary: 'rgb(0, 152, 155)',
   terciary: 'rgb(0, 180, 185)',
@@ -30,7 +31,11 @@ export const GlobalCss = createGlobalStyle`
   }
 
   body {
-    background-color: ${color.bgPrimary};
+    background-color: ${color.main};
+    color: ${color.fontPrimary};
+  }
+
+  a {
     color: ${color.fontPrimary};
   }
 `

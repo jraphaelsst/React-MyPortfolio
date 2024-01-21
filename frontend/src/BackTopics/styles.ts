@@ -4,7 +4,7 @@ export const TopicsContainer = styled.ul`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 36px;
+  margin: 36px 0;
 `
 
 export const Topic = styled.li`
@@ -12,6 +12,7 @@ export const Topic = styled.li`
   flex-direction: column;
   align-items: center;
   position: relative;
+  max-width: 260px;
 `
 
 export const TopicTitle = styled.h3`

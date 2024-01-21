@@ -12,6 +12,7 @@ export const Topic = styled.li`
   flex-direction: column;
   align-items: center;
   position: relative;
+  max-width: 260px;
 `
 
 export const TopicTitle = styled.h3`

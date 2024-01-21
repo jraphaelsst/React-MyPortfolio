@@ -2,7 +2,12 @@ import { styled } from 'styled-components'
 
 import { color } from '../styles'
 
-export const AboutContainer = styled.div``
+export const AboutContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+`
 
 export const Presentation = styled.div`
   display: flex;
@@ -34,14 +39,14 @@ export const Image = styled.img`
 `
 
 export const Title = styled.h2`
-  margin-top: 72px;
+  margin: 72px 0 20px 0;
   font-weight: 600;
   letter-spacing: 1.2px;
 `
 
 export const Texts = styled.div`
   display: block;
-  margin: 16px 0 0 0;
+  margin: 16px 0 42px 0;
 `
 
 export const Text = styled.p`
@@ -50,15 +55,3 @@ export const Text = styled.p`
   max-width: 520px;
   margin-bottom: 16px;
 `
-
-export const AboutSection = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-`
-
-export const AboutMe = styled.div`
-  display: block;
-`
-
-export const AboutWork = styled.div``
