@@ -38,4 +38,11 @@ export const GlobalCss = createGlobalStyle`
   a {
     color: ${color.fontPrimary};
   }
+
+  .sticky-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    animation-direction: top to bottom;
+  }
 `

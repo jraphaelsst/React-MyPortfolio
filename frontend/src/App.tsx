@@ -1,5 +1,4 @@
 import { BrowserRouter as Router } from 'react-router-dom'
-import Headroom from 'react-headroom'
 
 import { GlobalCss } from './styles'
 
@@ -16,19 +15,12 @@ function App() {
     <Router>
       <GlobalCss />
       <Banner />
+      <Navbar />
       <About />
       <Skills />
       <Projects />
       <Contact />
       <Footer />
-
-      <Headroom
-        style={{ WebkitTransition: 'all 0.5s ease-in-out' }}
-        upTolerance={2}
-        downTolerance={4}
-      >
-        <Navbar />
-      </Headroom>
     </Router>
   )
 }
