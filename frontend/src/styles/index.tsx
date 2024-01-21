@@ -44,5 +44,6 @@ export const GlobalCss = createGlobalStyle`
     top: 0;
     width: 100%;
     animation-direction: top to bottom;
+    z-index: 100;
   }
 `
