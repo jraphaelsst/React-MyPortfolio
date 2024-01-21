@@ -13,13 +13,24 @@ import {
 } from './styles'
 
 const Contact = () => {
+  const bannerSection = document.getElementById('banner-section')
+  const scrollBanner = () => {
+    bannerSection
+      ? bannerSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        })
+      : bannerSection
+  }
+
   return (
-    <Container>
+    <Container id="contact-section">
       <TitleContainer>
         <Title>CONTACT</Title>
         <Underline />
       </TitleContainer>
-      <Subtitle>Have questions or want to build something together?</Subtitle>
+      <Subtitle>Have questions or want to work together?</Subtitle>
       <Form id="messageForm">
         <Input id="name" type="text" placeholder="Name" />
         <Input id="email" type="email" placeholder="Enter email" />
@@ -34,7 +45,7 @@ const Contact = () => {
           <Button type="submit">Send</Button>
         </div>
       </Form>
-      <IconDiv>
+      <IconDiv onClick={scrollBanner}>
         <ArrowIcon className="fa fa-angles-up fa-2x" />
       </IconDiv>
     </Container>

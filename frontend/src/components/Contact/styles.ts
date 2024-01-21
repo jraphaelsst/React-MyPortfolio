@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 
-import { color } from '../styles'
+import { color } from '../../styles'
 
 export const Container = styled.section`
   height: fit-content;
@@ -10,13 +10,14 @@ export const Container = styled.section`
   align-items: center;
   box-shadow: -1px -1px 8px rgba(0, 0, 0, 0.3);
   position: relative;
+  padding-top: 24px;
 `
 
 export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 64px 0 64px 0;
+  margin: 64px 0 36px 0;
 `
 
 export const Title = styled.h1`
@@ -41,8 +42,8 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 18px;
-  margin: 48px 0 125px 0;
+  gap: 12px;
+  margin: 18px 0 60px 0;
   width: 380px;
 
   > div {

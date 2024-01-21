@@ -4,14 +4,15 @@ import SectionHeader from '../SectionHeader'
 import { CSSProperties } from 'react'
 
 type Props = {
+  id: string
   title: string
   children: JSX.Element
   style?: CSSProperties
 }
 
-const Container = ({ title, children, style }: Props) => {
+const Container = ({ id, title, children, style }: Props) => {
   return (
-    <SectionContainer title={title} style={style}>
+    <SectionContainer id={id} title={title} style={style}>
       <SectionHeader title={title} />
       {children}
     </SectionContainer>
