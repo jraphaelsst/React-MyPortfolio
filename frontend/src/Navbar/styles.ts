@@ -7,6 +7,7 @@ export const NavHeader = styled.nav`
   display: flex;
   align-items: center;
   padding: 20px;
+  z-index: 100;
   transition: all 0.5s ease;
 `
 
