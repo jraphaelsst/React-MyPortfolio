@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { color } from '../styles'
+import { color } from '../../styles'
 
 export const NavHeader = styled.nav`
   background-color: ${color.primary};

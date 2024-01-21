@@ -5,6 +5,6 @@ export const ProjectsContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 36px;
   width: 80%;
-  padding: 3% 8%;
+  padding: 8% 8%;
   text-align: center;
 `

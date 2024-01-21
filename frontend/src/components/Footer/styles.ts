@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 
-import { color } from '../styles'
+import { color } from '../../styles'
 
 export const Container = styled.div`
   height: 20vh;
@@ -30,6 +30,7 @@ export const Icon = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: all 0.2s ease;
 
   i {
     color: ${color.fontAlternative};

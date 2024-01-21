@@ -11,9 +11,9 @@ import {
   Title
 } from './styles'
 
-import image from '../media/97398844.jpeg'
+import image from '../../media/97398844.jpeg'
 
-import { color } from '../styles'
+import { color } from '../../styles'
 import BackTopics from '../BackTopics'
 import Container from '../Container'
 import FrontTopics from '../FrontTopics'
@@ -37,7 +37,11 @@ const About = () => {
   // }, [])
 
   return (
-    <Container title="ABOUT" style={{ backgroundColor: `${color.bgPrimary}` }}>
+    <Container
+      id="about-section"
+      title="ABOUT"
+      style={{ backgroundColor: `${color.bgPrimary}` }}
+    >
       <>
         <AboutContainer>
           <Presentation>

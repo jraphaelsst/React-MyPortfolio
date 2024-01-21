@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { ProjectsContainer } from './styles'
 
-import { color } from '../styles'
+import { color } from '../../styles'
 import Container from '../Container'
 import Project from '../Project'
 
@@ -64,6 +64,7 @@ const Projects = () => {
 
   return (
     <Container
+      id="projects-section"
       title="PROJECTS"
       style={{ backgroundColor: `${color.bgPrimary}` }}
     >

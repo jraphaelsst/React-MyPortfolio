@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { color } from '../styles'
+import { color } from '../../styles'
 
 import { bgAnimation, fadeInButton, fadeInText } from './keyframes'
 
@@ -9,8 +9,8 @@ export const Container = styled.section`
   height: 100vh;
   background: linear-gradient(
     315deg,
-    rgb(0, 0, 0) 0%,
-    rgba(20, 100, 180, 0.45) 220%
+    rgb(0, 0, 0) 10%,
+    rgba(20, 40, 80, 0.7) 100%
   );
   background-size: 400% 400%;
   animation: ${bgAnimation} 6s ease-in-out infinite;

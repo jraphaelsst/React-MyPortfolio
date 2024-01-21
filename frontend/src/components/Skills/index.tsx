@@ -10,14 +10,14 @@ import {
   Tag
 } from './styles'
 
-import { color } from '../styles'
+import { color } from '../../styles'
 
-import DonutChart from '../DonutChart'
 import Container from '../Container'
 
 const Skills = () => {
   return (
     <Container
+      id="skills-section"
       title="SKILLS"
       style={{ backgroundColor: `${color.bgSecondary}` }}
     >
@@ -65,9 +65,7 @@ const Skills = () => {
         <SoftSkills>
           <Subtitle>Technical Skills</Subtitle>
           <Items>
-            <Item>
-              <DonutChart></DonutChart>
-            </Item>
+            <Item></Item>
           </Items>
         </SoftSkills>
       </>

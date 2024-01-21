@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 
-import { color } from '../styles'
+import { color } from '../../styles'
 
 export const ProjectCard = styled.div`
   border: 1px solid ${color.fontPrimary};
