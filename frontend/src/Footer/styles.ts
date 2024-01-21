@@ -9,7 +9,8 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 36px;
+  padding-top: 78px;
+  margin-bottom: 120px;
 `
 
 export const Copyright = styled.h4`
