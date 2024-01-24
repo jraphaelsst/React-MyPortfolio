@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 
-import { color } from '../../styles'
+import { breakpoints, color } from '../../styles'
 
 export const Container = styled.section`
   height: fit-content;
@@ -43,13 +43,17 @@ export const Form = styled.form`
   justify-content: center;
   align-items: center;
   gap: 12px;
-  margin: 18px 0 60px 0;
+  margin: 18px 0 80px 0;
   width: 380px;
 
   > div {
     display: flex;
     position: relative;
     width: 100%;
+  }
+
+  @media (max-width: ${breakpoints.smartphone}) {
+    width: 320px;
   }
 `
 

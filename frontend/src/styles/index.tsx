@@ -20,6 +20,12 @@ export const color = {
   support: 'rgb(224, 24, 100)'
 }
 
+export const breakpoints = {
+  desktop: '1024px',
+  tablet: '768px',
+  smartphone: '420px'
+}
+
 export const GlobalCss = createGlobalStyle`
   * {
     margin: 0;
