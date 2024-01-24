@@ -1,6 +1,27 @@
 import styled from 'styled-components'
 
-import { color } from '../../styles'
+import { breakpoints, color } from '../../styles'
+
+export const Hamburguer = styled.div`
+  width: 32px;
+
+  &.is-open {
+    display: none;
+  }
+
+  span {
+    height: 2px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: ${color.fontAlternative};
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: ${breakpoints.tablet}) {
+    display: none;
+  }
+`
 
 export const NavHeader = styled.nav`
   background-color: ${color.primary};
@@ -9,15 +30,38 @@ export const NavHeader = styled.nav`
   padding: 20px;
   z-index: 100;
   transition: all 0.5s ease;
-`
 
-export const NavRow = styled.div`
-  margin-left: 32px;
+  @media (max-width: ${breakpoints.tablet}) {
+    display: block;
+  }
 `
 
 export const Links = styled.ul`
   display: flex;
   font-size: 16px;
+  transition: all 0.5s ease;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: block;
+    margin: 0 auto;
+  }
+`
+
+export const NavRow = styled.div`
+  display: flex;
+  width: 100%;
+
+  ${Links} {
+    margin: 0 auto;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    flex: 1;
+
+    ${Links} {
+      display: none;
+    }
+  }
 `
 
 export const Link = styled.li`
@@ -29,6 +73,16 @@ export const Link = styled.li`
   &:hover {
     color: ${color.support};
     transform: scale(1.08);
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    margin-right: 0;
+
+    > div {
+      display: block;
+      padding: 16px 0;
+      text-align: center;
+    }
   }
 `
 
@@ -46,5 +100,19 @@ export const LinkAnimation = styled.div`
   &:hover {
     --d: 100%;
     --p: 100%;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: block;
+    width: 10%;
+    margin: 0 auto;
+  }
+`
+
+export const NavMobile = styled.nav`
+  display: none;
+
+  &.is-open {
+    display: block;
   }
 `

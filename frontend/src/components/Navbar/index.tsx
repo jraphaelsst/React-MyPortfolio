@@ -1,8 +1,17 @@
 import { useEffect, useState } from 'react'
 
-import { Link, LinkAnimation, Links, NavHeader, NavRow } from './styles'
+import {
+  Hamburguer,
+  Link,
+  LinkAnimation,
+  Links,
+  NavHeader,
+  NavMobile,
+  NavRow
+} from './styles'
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [stickyClass, setStickyClass] = useState('')
 
   // Set Sticky Navbar function
@@ -26,6 +35,7 @@ const Navbar = () => {
           inline: 'nearest'
         })
       : bannerSection
+    setIsMenuOpen(false)
   }
 
   // Scroll to About Section function
@@ -38,6 +48,7 @@ const Navbar = () => {
           inline: 'nearest'
         })
       : aboutSection
+    setIsMenuOpen(false)
   }
 
   // Scroll to Skills Section function
@@ -50,6 +61,7 @@ const Navbar = () => {
           inline: 'nearest'
         })
       : skillsSection
+    setIsMenuOpen(false)
   }
 
   // Scroll to Projects Section function
@@ -62,6 +74,7 @@ const Navbar = () => {
           inline: 'nearest'
         })
       : projectsSection
+    setIsMenuOpen(false)
   }
 
   // Scroll to Contact Section function
@@ -74,11 +87,23 @@ const Navbar = () => {
           inline: 'nearest'
         })
       : contactSection
+    setIsMenuOpen(false)
   }
 
   return (
     <NavHeader className={`${stickyClass}`}>
       <NavRow>
+        <Hamburguer
+          id="hamburguer"
+          onClick={() => {
+            setIsMenuOpen(!isMenuOpen)
+          }}
+          className={isMenuOpen ? 'is-open' : ''}
+        >
+          <span />
+          <span />
+          <span />
+        </Hamburguer>
         <Links>
           <Link onClick={scrollBanner}>
             <LinkAnimation>Home</LinkAnimation>
@@ -97,6 +122,25 @@ const Navbar = () => {
           </Link>
         </Links>
       </NavRow>
+      <NavMobile id="nav-mobile" className={isMenuOpen ? 'is-open' : ''}>
+        <Links>
+          <Link onClick={scrollBanner}>
+            <LinkAnimation>Home</LinkAnimation>
+          </Link>
+          <Link onClick={scrollAbout}>
+            <LinkAnimation>About</LinkAnimation>
+          </Link>
+          <Link onClick={scrollSkills}>
+            <LinkAnimation>Skills</LinkAnimation>
+          </Link>
+          <Link onClick={scrollProjects}>
+            <LinkAnimation>Projects</LinkAnimation>
+          </Link>
+          <Link onClick={scrollContact}>
+            <LinkAnimation>Contact</LinkAnimation>
+          </Link>
+        </Links>
+      </NavMobile>
     </NavHeader>
   )
 }

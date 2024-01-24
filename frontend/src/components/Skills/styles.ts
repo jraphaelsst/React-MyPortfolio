@@ -1,12 +1,19 @@
 import { styled } from 'styled-components'
 
-import { color } from '../../styles'
+import { breakpoints, color } from '../../styles'
 
 export const SkillsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 72px;
   width: 90%;
   margin: 24px 0 32px 0;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    grid-template-columns: 1fr;
+    row-gap: 72px;
+    width: 70%;
+  }
 `
 
 export const Subtitle = styled.h2`
@@ -18,21 +25,21 @@ export const Subtitle = styled.h2`
 
 export const Languages = styled.div``
 
-export const Frameworks = styled.div`
-  margin-left: 24px;
-`
+export const Frameworks = styled.div``
 
 export const SoftSkills = styled.div``
 
 export const Items = styled.ul`
-  margin-top: 24px;
+  margin-top: 16px;
+  text-align: center;
 `
 
 export const Item = styled.li`
-  display: block;
-  margin-bottom: 42px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  justify-items: center;
   width: 100%;
-  align-items: center;
 `
 
 export const Tag = styled.p`
@@ -40,13 +47,13 @@ export const Tag = styled.p`
   font-size: 18px;
   letter-spacing: 0.8px;
   margin-bottom: 8px;
+  text-align: left;
 `
 
 export const ProgressBar = styled.div`
   progress[value] {
     appearance: none;
-    width: 75%;
-    margin-right: 8px;
+    width: 100%;
   }
 
   progress[value]::-webkit-progress-bar {

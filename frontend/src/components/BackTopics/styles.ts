@@ -1,4 +1,5 @@
 import { styled } from 'styled-components'
+import { breakpoints } from '../../styles'
 
 export const TopicsContainer = styled.ul`
   width: 100%;
@@ -6,6 +7,16 @@ export const TopicsContainer = styled.ul`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 36px 0;
   z-index: 0;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 36px;
+    justify-items: center;
+  }
+
+  @media (max-width: ${breakpoints.smartphone}) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const Topic = styled.li`

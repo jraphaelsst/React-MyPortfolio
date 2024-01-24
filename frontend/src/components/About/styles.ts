@@ -18,6 +18,7 @@ export const Presentation = styled.div`
 
 export const Icons = styled.ul`
   display: flex;
+  justify-content: center;
   margin-top: 16px;
 `
 

@@ -29,7 +29,7 @@ export const Content = styled.div`
 
 export const Text = styled.p`
   text-align: center;
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 18px;
   animation: ${fadeInText} 0.8s ease-in;
 `

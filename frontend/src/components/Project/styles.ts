@@ -1,11 +1,11 @@
 import { styled } from 'styled-components'
 
-import { color } from '../../styles'
+import { breakpoints, color } from '../../styles'
 
 export const ProjectCard = styled.div`
   border: 1px solid ${color.fontPrimary};
   width: 100%;
-  height: 250px;
+  height: 280px;
   padding: 16px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease;
@@ -14,10 +14,15 @@ export const ProjectCard = styled.div`
   flex-direction: column;
   justify-content: space-between;
   border-radius: 4px;
+  position: relative;
 
   &:hover {
     transform: scale(1.09);
     box-shadow: 7px 8px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    max-width: 350px;
   }
 `
 
@@ -38,14 +43,13 @@ export const CardDescription = styled.p`
 `
 
 export const Tech = styled.p`
-  margin-top: 24px;
-  margin-left: 14px;
-  margin-bottom: 12px;
   font-weight: 600;
   font-size: 18px;
-  display: flex;
   align-items: center;
   color: ${color.fontSecondary};
+  position: absolute;
+  bottom: 24px;
+  left: 12px;
 
   span {
     margin-left: 4px;
