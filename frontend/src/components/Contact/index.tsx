@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import {
   ArrowIcon,
   Button,
@@ -13,16 +15,34 @@ import {
 } from './styles'
 
 const Contact = () => {
-  const bannerSection = document.getElementById('banner-section')
-  const scrollBanner = () => {
-    bannerSection
-      ? bannerSection.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-          inline: 'nearest'
-        })
-      : bannerSection
-  }
+  // Scroll Effect on "Banner-scroll" button click
+  useEffect(() => {
+    // Declare Banner Section
+    const bannerSection = document.getElementById('banner-section')
+    // Declare Scroll function
+    const scrollBanner = () => {
+      bannerSection
+        ? bannerSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+          })
+        : bannerSection
+    }
+
+    // Declare scroll-banner-button
+    const button = document.getElementById('scroll-banner-button')
+    if (button) {
+      button.addEventListener('click', scrollBanner)
+    }
+
+    return () => {
+      if (button) {
+        // Clears
+        button.removeEventListener('click', scrollBanner)
+      }
+    }
+  }, [])
 
   return (
     <Container id="contact-section">
@@ -45,7 +65,7 @@ const Contact = () => {
           <Button type="submit">Send</Button>
         </div>
       </Form>
-      <IconDiv onClick={scrollBanner}>
+      <IconDiv id="scroll-banner-button">
         <ArrowIcon className="fa fa-angles-up fa-2x" />
       </IconDiv>
     </Container>
