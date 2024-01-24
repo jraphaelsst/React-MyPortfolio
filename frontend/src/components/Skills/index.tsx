@@ -63,7 +63,7 @@ const Skills = () => {
           </Frameworks>
         </SkillsContainer>
         <SoftSkills>
-          <Subtitle>Technical Skills</Subtitle>
+          <Subtitle></Subtitle>
           <Items>
             <Item></Item>
           </Items>

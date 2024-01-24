@@ -45,24 +45,29 @@ const About = () => {
       <>
         <AboutContainer>
           <Presentation>
-            <Image src={image} />
-            <Icons>
-              <Icon>
-                <a href="">
-                  <i className="fa-brands fa-github fa-2x" />
-                </a>
-              </Icon>
-              <Icon>
-                <a href="">
-                  <i className="fa-brands fa-whatsapp fa-2x" />
-                </a>
-              </Icon>
-              <Icon>
-                <a href="">
-                  <i className="fa-brands fa-instagram fa-2x" />
-                </a>
-              </Icon>
-            </Icons>
+            <div>
+              <Image src={image} />
+              <Icons>
+                <Icon>
+                  <a href="https://github.com/jraphaelsst" target="blank">
+                    <i className="fa-brands fa-github fa-2x" />
+                  </a>
+                </Icon>
+                <Icon>
+                  <a href="https://wa.me/+61430557622?text=Hi!" target="blank">
+                    <i className="fa-brands fa-whatsapp fa-2x" />
+                  </a>
+                </Icon>
+                <Icon>
+                  <a
+                    href="https://www.instagram.com/jraphaelsouza"
+                    target="blank"
+                  >
+                    <i className="fa-brands fa-instagram fa-2x" />
+                  </a>
+                </Icon>
+              </Icons>
+            </div>
             <Title>Who&rsquo;s this guy?</Title>
             <Texts>
               <Text>
