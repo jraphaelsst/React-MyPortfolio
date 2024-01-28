@@ -7,6 +7,7 @@ export const TitleContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 64px 0 64px 0;
+  animation: fadeIn 5s;
 `
 
 export const Title = styled.h1`
@@ -17,6 +18,6 @@ export const Title = styled.h1`
 `
 
 export const Underline = styled.div`
-  width: 65px;
+  width: 55%;
   border-top: 4px solid ${color.fontPrimary};
 `

@@ -7,7 +7,7 @@ export const ProjectCard = styled.div`
   width: 100%;
   height: 280px;
   padding: 16px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease;
   background-color: ${color.bgSecondary};
   display: flex;
@@ -17,8 +17,8 @@ export const ProjectCard = styled.div`
   position: relative;
 
   &:hover {
-    transform: scale(1.09);
-    box-shadow: 7px 8px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(0.96);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
   }
 
   @media (max-width: ${breakpoints.tablet}) {
@@ -49,7 +49,7 @@ export const Tech = styled.p`
   color: ${color.fontSecondary};
   position: absolute;
   bottom: 24px;
-  left: 12px;
+  left: 24px;
 
   span {
     margin-left: 4px;

@@ -8,7 +8,7 @@ export const Container = styled.div`
 
 export const Top = styled.div`
   float: left;
-  border-right: 30px solid ${color.terciary};
+  border-right: 30px solid ${color.secondary};
   border-top: 52px solid transparent;
   border-bottom: 52px solid transparent;
 `
@@ -17,7 +17,7 @@ export const Mid = styled.div`
   float: left;
   height: 104px;
   width: 60px;
-  background-color: ${color.terciary};
+  background-color: ${color.secondary};
 
   display: flex;
   align-items: center;
@@ -26,7 +26,7 @@ export const Mid = styled.div`
 
 export const Bottom = styled.div`
   float: left;
-  border-left: 30px solid ${color.terciary};
+  border-left: 30px solid ${color.secondary};
   border-top: 52px solid transparent;
   border-bottom: 52px solid transparent;
 `

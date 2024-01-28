@@ -12,11 +12,9 @@ import {
 } from './styles'
 
 import image from '../../media/97398844.jpeg'
-
 import { color } from '../../styles'
-import BackTopics from '../BackTopics'
+
 import Container from '../Container'
-import FrontTopics from '../FrontTopics'
 
 const About = () => {
   // const userUrl = 'https://api.github.com/users/jraphaelsst'
@@ -40,7 +38,7 @@ const About = () => {
     <Container
       id="about-section"
       title="ABOUT"
-      style={{ backgroundColor: `${color.bgPrimary}` }}
+      style={{ backgroundColor: `${color.bgSecondary}` }}
     >
       <>
         <AboutContainer>
@@ -77,19 +75,15 @@ const About = () => {
               <Text>
                 Specialized in Back-end development, I have a serious passion
                 for writing performatic, well designed architectures, secure
-                database structures and scripting algorithms.
+                database structures & scripting algorithms.
               </Text>
               <Text>
-                And as if it couldn&rsquo;t be forgotten, I love giving my
-                servers a beautiful face being considerative for UI effects,
-                animations and creating intuitive, dynamic user experiences.
+                And as if it couldn&rsquo;t be forgotten, I build my Front-end
+                with a pretty face, being considerative for UI effects,
+                animations and creating intuitive & dynamic user experiences.
               </Text>
             </Texts>
           </Presentation>
-          <Title>How&rsquo;s my Back-end?</Title>
-          <BackTopics />
-          <Title>How&rsquo;s my Front-end?</Title>
-          <FrontTopics />
         </AboutContainer>
 
         {/* <div>

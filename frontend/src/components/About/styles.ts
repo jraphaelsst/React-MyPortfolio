@@ -40,14 +40,14 @@ export const Image = styled.img`
 `
 
 export const Title = styled.h2`
-  margin: 72px 0 20px 0;
+  margin: 56px 0 20px 0;
   font-weight: 600;
   letter-spacing: 1.2px;
 `
 
 export const Texts = styled.div`
   display: block;
-  margin: 16px 0 42px 0;
+  margin: 8px 0 92px 0;
 `
 
 export const Text = styled.p`

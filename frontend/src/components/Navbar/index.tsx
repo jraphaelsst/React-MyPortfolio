@@ -51,6 +51,19 @@ const Navbar = () => {
     setIsMenuOpen(false)
   }
 
+  // Scroll to About Section function
+  const workSection = document.getElementById('work-section')
+  const scrollWork = () => {
+    workSection
+      ? workSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        })
+      : workSection
+    setIsMenuOpen(false)
+  }
+
   // Scroll to Skills Section function
   const skillsSection = document.getElementById('skills-section')
   const scrollSkills = () => {
@@ -110,6 +123,9 @@ const Navbar = () => {
           </Link>
           <Link onClick={scrollAbout}>
             <LinkAnimation>About</LinkAnimation>
+          </Link>
+          <Link onClick={scrollWork}>
+            <LinkAnimation>My Work</LinkAnimation>
           </Link>
           <Link onClick={scrollSkills}>
             <LinkAnimation>Skills</LinkAnimation>

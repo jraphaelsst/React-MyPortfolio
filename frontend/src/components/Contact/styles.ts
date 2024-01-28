@@ -11,6 +11,7 @@ export const Container = styled.section`
   box-shadow: -1px -1px 8px rgba(0, 0, 0, 0.3);
   position: relative;
   padding-top: 24px;
+  width: 100%;
 `
 
 export const TitleContainer = styled.div`
@@ -43,7 +44,7 @@ export const Form = styled.form`
   justify-content: center;
   align-items: center;
   gap: 12px;
-  margin: 18px 0 80px 0;
+  margin: 18px 0 100px 0;
   width: 380px;
 
   > div {
