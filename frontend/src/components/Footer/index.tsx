@@ -35,17 +35,17 @@ const Footer = () => {
     <Container id="footer-section">
       <Icons id="footerIcons">
         <Icon className={animateFooterIconClass}>
-          <a href="">
+          <a href="https://github.com/jraphaelsst">
             <i className="fa-brands fa-github fa-2x" />
           </a>
         </Icon>
         <Icon className={animateFooterIconClass}>
-          <a href="">
+          <a href="https://wa.me/+61430557622?text=Hi!">
             <i className="fa-brands fa-whatsapp fa-2x" />
           </a>
         </Icon>
         <Icon className={animateFooterIconClass}>
-          <a href="">
+          <a href="https://www.instagram.com/jraphaelsouza">
             <i className="fa-brands fa-instagram fa-2x" />
           </a>
         </Icon>
