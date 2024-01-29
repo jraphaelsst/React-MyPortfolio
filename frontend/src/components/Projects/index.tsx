@@ -1,8 +1,15 @@
 import { useEffect, useState } from 'react'
 
-import { ProjectsContainer } from './styles'
+import {
+  ProjectsContainer,
+  SectionTitle,
+  TitleContainer,
+  Underline
+} from './styles'
 
 import { color } from '../../styles'
+import visibleInViewport from '../../utils/VisibleInViewport'
+
 import Container from '../Container'
 import Project from '../Project'
 
@@ -62,13 +69,45 @@ const Projects = () => {
   //     })
   // })
 
+  const [animateSectionTitleClass, setAnimateSectionTitleClass] = useState('')
+  const [animateUnderlineClass, setAnimateUnderlineClass] = useState('')
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionTitleEl = document.getElementById('projectsSectionTitle')
+      const underlineEl = document.getElementById('projectsUnderline')
+
+      sectionTitleEl && visibleInViewport(sectionTitleEl, true)
+        ? setAnimateSectionTitleClass('slideProjectsTitle')
+        : setAnimateSectionTitleClass('')
+
+      underlineEl && visibleInViewport(underlineEl, true)
+        ? setAnimateUnderlineClass('slideProjectsUnderline')
+        : setAnimateUnderlineClass('')
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <Container
       id="projects-section"
-      title="PROJECTS"
       style={{ backgroundColor: `${color.bgPrimary}` }}
     >
       <>
+        <TitleContainer>
+          <SectionTitle
+            id="projectsSectionTitle"
+            className={animateSectionTitleClass}
+          >
+            Projects
+          </SectionTitle>
+          <Underline id="projectsUnderline" className={animateUnderlineClass} />
+        </TitleContainer>
         <ProjectsContainer>
           {repos.map((repo) => (
             <Project

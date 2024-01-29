@@ -49,6 +49,7 @@ export const Links = styled.ul`
 
 export const NavRow = styled.div`
   display: flex;
+  justify-content: center;
   width: 100%;
 
   ${Links} {
@@ -65,10 +66,13 @@ export const NavRow = styled.div`
 `
 
 export const Link = styled.li`
+  padding-left: 4px;
   margin-right: 78px;
   color: ${color.fontAlternative};
   transition: all 0.2s;
   cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
 
   &:hover {
     color: ${color.support};
@@ -79,15 +83,14 @@ export const Link = styled.li`
     margin-right: 0;
 
     > div {
-      display: block;
+      display: flex;
       padding: 16px 0;
-      text-align: center;
     }
   }
 `
 
 export const LinkAnimation = styled.div`
-  width: 92%;
+  width: 80%;
   display: flex;
   justify-content: center;
   padding: 1px;
@@ -95,8 +98,8 @@ export const LinkAnimation = styled.div`
   background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0)
     1.45px no-repeat;
   transition:
-    0.25s,
-    background-position 0s 0.25s;
+    0.4s,
+    background-position 0s 0.4s;
   &:hover {
     --d: 100%;
     --p: 100%;

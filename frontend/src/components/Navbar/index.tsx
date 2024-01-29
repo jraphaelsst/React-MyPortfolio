@@ -17,7 +17,7 @@ const Navbar = () => {
   // Set Sticky Navbar function
   const stickNavbar = () => {
     const windowHeight = window.scrollY
-    windowHeight > 600 ? setStickyClass('sticky-nav') : setStickyClass('')
+    windowHeight > 650 ? setStickyClass('sticky-nav') : setStickyClass('')
   }
 
   // Sticky Navbar listener
@@ -48,6 +48,19 @@ const Navbar = () => {
           inline: 'nearest'
         })
       : aboutSection
+    setIsMenuOpen(false)
+  }
+
+  // Scroll to About Section function
+  const workSection = document.getElementById('work-section')
+  const scrollWork = () => {
+    workSection
+      ? workSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        })
+      : workSection
     setIsMenuOpen(false)
   }
 
@@ -111,6 +124,9 @@ const Navbar = () => {
           <Link onClick={scrollAbout}>
             <LinkAnimation>About</LinkAnimation>
           </Link>
+          <Link onClick={scrollWork}>
+            <LinkAnimation>My Work</LinkAnimation>
+          </Link>
           <Link onClick={scrollSkills}>
             <LinkAnimation>Skills</LinkAnimation>
           </Link>
@@ -129,6 +145,9 @@ const Navbar = () => {
           </Link>
           <Link onClick={scrollAbout}>
             <LinkAnimation>About</LinkAnimation>
+          </Link>
+          <Link onClick={scrollWork}>
+            <LinkAnimation>My Work</LinkAnimation>
           </Link>
           <Link onClick={scrollSkills}>
             <LinkAnimation>Skills</LinkAnimation>

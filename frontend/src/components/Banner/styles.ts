@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import { color } from '../../styles'
-
 import { bgAnimation, fadeInButton, fadeInText } from './keyframes'
+
+import { color } from '../../styles'
 
 export const Container = styled.section`
   width: 100%;
@@ -31,7 +31,7 @@ export const Text = styled.p`
   text-align: center;
   font-size: 32px;
   margin-bottom: 18px;
-  animation: ${fadeInText} 0.8s ease-in;
+  animation: ${fadeInText} 2s ease-in-out;
 `
 
 export const Name = styled.span`
@@ -55,12 +55,13 @@ export const Button = styled.div`
   margin-top: 16px;
   transition: rotate 0.65s;
   cursor: pointer;
-  animation: ${fadeInButton} 1.6s ease-out;
+  animation: ${fadeInButton} 2s ease-in-out;
   transform: translate(0%, 0%);
 
   &:hover {
     border: 1px solid ${color.terciary};
     background-color: ${color.terciary};
+    color: ${color.bgSecondary};
   }
 
   &:hover ${ArrowIcon} {

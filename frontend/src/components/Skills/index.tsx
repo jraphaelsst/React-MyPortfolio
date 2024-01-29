@@ -1,27 +1,65 @@
+import { useEffect, useState } from 'react'
+
+import { color } from '../../styles'
+import visibleInViewport from '../../utils/VisibleInViewport'
+
 import {
   Frameworks,
   Item,
   Items,
   Languages,
   ProgressBar,
+  SectionTitle,
   SkillsContainer,
   SoftSkills,
   Subtitle,
-  Tag
+  Tag,
+  TitleContainer,
+  Underline
 } from './styles'
-
-import { color } from '../../styles'
 
 import Container from '../Container'
 
 const Skills = () => {
+  const [animateSectionTitleClass, setAnimateSectionTitleClass] = useState('')
+  const [animateUnderlineClass, setAnimateUnderlineClass] = useState('')
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionTitleEl = document.getElementById('skillsSectionTitle')
+      const underlineEl = document.getElementById('skillsUnderline')
+
+      sectionTitleEl && visibleInViewport(sectionTitleEl, true)
+        ? setAnimateSectionTitleClass('slideSkillsTitle')
+        : setAnimateSectionTitleClass('')
+
+      underlineEl && visibleInViewport(underlineEl, true)
+        ? setAnimateUnderlineClass('slideSkillsUnderline')
+        : setAnimateUnderlineClass('')
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <Container
       id="skills-section"
-      title="SKILLS"
       style={{ backgroundColor: `${color.bgSecondary}` }}
     >
       <>
+        <TitleContainer>
+          <SectionTitle
+            id="skillsSectionTitle"
+            className={animateSectionTitleClass}
+          >
+            Skills
+          </SectionTitle>
+          <Underline id="skillsUnderline" className={animateUnderlineClass} />
+        </TitleContainer>
         <SkillsContainer>
           <Languages>
             <Subtitle>Languages</Subtitle>

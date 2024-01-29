@@ -2,6 +2,38 @@ import { styled } from 'styled-components'
 
 import { breakpoints, color } from '../../styles'
 
+import { slideInRightTitle, slideInRightUnderline } from '../../utils/Keyframes'
+
+export const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 64px 0 64px 0;
+`
+
+export const SectionTitle = styled.h1`
+  font-size: 38px;
+  margin-bottom: 10px;
+  color: ${color.fontPrimary};
+  font-family: Roboto, sans-serif;
+  opacity: 0;
+
+  &.slideSkillsTitle {
+    animation: ${slideInRightTitle} 0.6s ease-out forwards;
+  }
+`
+
+export const Underline = styled.div`
+  width: 55%;
+  border-top: 4px solid ${color.fontPrimary};
+  opacity: 0;
+
+  &.slideSkillsUnderline {
+    animation: ${slideInRightUnderline} 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+`
+
 export const SkillsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;

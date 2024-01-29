@@ -1,7 +1,8 @@
 import { styled } from 'styled-components'
 
-import { breakpoints, color } from '../../styles'
-import { slideInLeftTitle, slideInLeftUnderline } from '../../utils/Keyframes'
+import { color } from './styles'
+
+import { slideInLeftTitle, slideInLeftUnderline } from './utils/Keyframes'
 
 export const TitleContainer = styled.div`
   display: flex;
@@ -17,7 +18,7 @@ export const SectionTitle = styled.h1`
   font-family: Roboto, sans-serif;
   opacity: 0;
 
-  &.slideProjectsTitle {
+  &.slideTopicsTitle {
     animation: ${slideInLeftTitle} 0.6s ease-out forwards;
   }
 `
@@ -27,23 +28,8 @@ export const Underline = styled.div`
   border-top: 4px solid ${color.fontPrimary};
   opacity: 0;
 
-  &.slideProjectsUnderline {
+  &.slideTopicsUnderline {
     animation: ${slideInLeftUnderline} 0.6s ease-out forwards;
     animation-delay: 0.3s;
-  }
-`
-
-export const ProjectsContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 36px;
-  width: 80%;
-  padding: 8% 8%;
-  text-align: center;
-  margin-bottom: 48px;
-
-  @media (max-width: ${breakpoints.tablet}) {
-    grid-template-columns: 1fr;
-    justify-items: center;
   }
 `

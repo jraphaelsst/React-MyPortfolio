@@ -1,5 +1,13 @@
 import { styled } from 'styled-components'
+
 import { breakpoints } from '../../styles'
+
+export const Title = styled.h2`
+  margin: 76px 0 42px 0;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  font-size: 28px;
+`
 
 export const TopicsContainer = styled.ul`
   width: 100%;

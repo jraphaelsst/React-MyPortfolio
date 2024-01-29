@@ -1,6 +1,7 @@
 import { styled } from 'styled-components'
 
 import { color } from '../../styles'
+import { fadeInCopyright, fadeInFooterIcon } from './keyframes'
 
 export const Container = styled.div`
   height: 20vh;
@@ -20,6 +21,10 @@ export const Copyright = styled.h4`
   span {
     color: ${color.support};
   }
+
+  &.fadeInCopyright {
+    animation: ${fadeInCopyright} 2s ease-out forwards;
+  }
 `
 
 export const Icon = styled.div`
@@ -30,6 +35,7 @@ export const Icon = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  opacity: 0;
   transition: all 0.2s ease;
 
   i {
@@ -39,9 +45,25 @@ export const Icon = styled.div`
   &:hover {
     transform: scale(0.9);
   }
+
+  &.slideFooterInIcon {
+    animation: ${fadeInFooterIcon} 1s ease-in-out forwards;
+
+    &:nth-child(1) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.7s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 1.1s;
+    }
+  }
 `
 
-export const Icons = styled.ul`
+export const Icons = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
