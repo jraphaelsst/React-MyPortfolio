@@ -1,6 +1,13 @@
 import { styled } from 'styled-components'
 
 import { breakpoints, color } from '../../styles'
+import {
+  fadeInButton,
+  fadeInSubtitle,
+  fadeInTitle,
+  fadeInUnderline
+} from './keyframes'
+import { slideInLeftTitle, slideInRightTitle } from '../../utils/Keyframes'
 
 export const Container = styled.section`
   height: fit-content;
@@ -21,21 +28,38 @@ export const TitleContainer = styled.div`
   margin: 64px 0 36px 0;
 `
 
-export const Title = styled.h1`
+export const SectionTitle = styled.h1`
   font-size: 38px;
   margin-bottom: 10px;
   color: ${color.fontAlternative};
   font-family: Roboto, sans-serif;
+  opacity: 0;
+
+  &.fadeInContactTitle {
+    animation: ${fadeInTitle} 0.8s ease-out forwards;
+  }
 `
 
 export const Underline = styled.div`
   width: 65px;
   border-top: 4px solid ${color.fontAlternative};
+  opacity: 0;
+
+  &.fadeInContactUnderline {
+    animation: ${fadeInUnderline} 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+  }
 `
 
 export const Subtitle = styled.div`
   color: ${color.secondary};
   margin-bottom: 64px;
+  opacity: 0;
+
+  &.fadeInContactSubtitle {
+    animation: ${fadeInSubtitle} 1.2s ease-in-out forwards;
+    animation-delay: 0.2s;
+  }
 `
 
 export const Form = styled.form`
@@ -66,12 +90,25 @@ export const Input = styled.input`
   color: #757575;
   font-size: 16px;
   width: 100%;
+  opacity: 0;
   transition: all 0.3s ease;
 
   &:focus {
     outline: none;
     box-shadow: 0px 0px 5px #757575;
     transform: scale(1.05);
+  }
+
+  &.slideInputField {
+    &:nth-child(1) {
+      animation: ${slideInRightTitle} 1.5s ease-in-out forwards;
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(2) {
+      animation: ${slideInLeftTitle} 1.5s ease-in-out forwards;
+      animation-delay: 0.5s;
+    }
   }
 `
 
@@ -83,12 +120,18 @@ export const Textarea = styled.textarea`
   color: #757575;
   font-size: 15px;
   width: 100%;
+  opacity: 0;
   transition: all 0.3s ease;
 
   &:focus {
     outline: none;
     box-shadow: 0px 0px 5px #757575;
     transform: scale(1.05);
+  }
+
+  &.slideInputField {
+    animation: ${slideInRightTitle} 1.5s ease-in-out forwards;
+    animation-delay: 0.8s;
   }
 `
 
@@ -101,6 +144,7 @@ export const Button = styled.button`
   background-color: ${color.main};
   position: absolute;
   right: 0;
+  opacity: 0;
   transition: all 0.3s ease;
 
   &:hover {
@@ -108,6 +152,11 @@ export const Button = styled.button`
     background-color: ${color.secondary};
     color: ${color.fontAlternative};
     border-color: ${color.secondary};
+  }
+
+  &.fadeInFormButton {
+    animation: ${fadeInButton} 3s ease-out forwards;
+    animation-delay: 0.8s;
   }
 `
 
@@ -119,10 +168,16 @@ export const IconDiv = styled.div`
   bottom: -22px;
   padding: 8px;
   cursor: pointer;
+  opacity: 0;
   transition: all 0.3s ease;
 
   &:hover {
     transform: scale(0.95);
+  }
+
+  &.fadeInBannerScrollButton {
+    animation: ${fadeInButton} 2.5s ease-out forwards;
+    animation-delay: 0.3s;
   }
 `
 

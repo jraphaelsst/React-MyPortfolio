@@ -98,8 +98,8 @@ export const LinkAnimation = styled.div`
   background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0)
     1.45px no-repeat;
   transition:
-    0.25s,
-    background-position 0s 0.25s;
+    0.4s,
+    background-position 0s 0.4s;
   &:hover {
     --d: 100%;
     --p: 100%;

@@ -17,7 +17,7 @@ const Navbar = () => {
   // Set Sticky Navbar function
   const stickNavbar = () => {
     const windowHeight = window.scrollY
-    windowHeight > 600 ? setStickyClass('sticky-nav') : setStickyClass('')
+    windowHeight > 650 ? setStickyClass('sticky-nav') : setStickyClass('')
   }
 
   // Sticky Navbar listener
@@ -145,6 +145,9 @@ const Navbar = () => {
           </Link>
           <Link onClick={scrollAbout}>
             <LinkAnimation>About</LinkAnimation>
+          </Link>
+          <Link onClick={scrollWork}>
+            <LinkAnimation>My Work</LinkAnimation>
           </Link>
           <Link onClick={scrollSkills}>
             <LinkAnimation>Skills</LinkAnimation>

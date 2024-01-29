@@ -17,7 +17,7 @@ function Topics({ topic }: Props) {
     <>
       {topic === 'backend' ? (
         <>
-          <Title>My Back-ends</Title>
+          <Title>My Back-end</Title>
           <TopicsContainer>
             <Topic>
               <Hexagon icon="fa-solid fa-bolt fa-3x" />
@@ -54,7 +54,7 @@ function Topics({ topic }: Props) {
         </>
       ) : (
         <>
-          <Title>My Front-ends</Title>
+          <Title>My Front-end</Title>
           <TopicsContainer>
             <Topic>
               <Hexagon icon="fa-solid fa-gauge-high fa-3x" />
