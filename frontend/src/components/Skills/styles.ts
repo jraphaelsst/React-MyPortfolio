@@ -1,8 +1,9 @@
 import { styled } from 'styled-components'
 
 import { breakpoints, color } from '../../styles'
-
 import { slideInRightTitle, slideInRightUnderline } from '../../utils/Keyframes'
+
+import { slideInLeft, slideInRight } from './keyframes'
 
 export const TitleContainer = styled.div`
   display: flex;
@@ -37,8 +38,8 @@ export const Underline = styled.div`
 export const SkillsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 72px;
-  width: 90%;
+  gap: 10%;
+  width: 80%;
   margin: 24px 0 32px 0;
 
   @media (max-width: ${breakpoints.tablet}) {
@@ -55,9 +56,21 @@ export const Subtitle = styled.h2`
   margin-bottom: 56px;
 `
 
-export const Languages = styled.div``
+export const Languages = styled.div`
+  opacity: 0;
 
-export const Frameworks = styled.div``
+  &.slideInRight {
+    animation: ${slideInRight} 1s ease forwards;
+  }
+`
+
+export const Frameworks = styled.div`
+  opacity: 0;
+
+  &.slideInLeft {
+    animation: ${slideInLeft} 1s ease forwards;
+  }
+`
 
 export const SoftSkills = styled.div``
 

@@ -26,6 +26,11 @@ export const ProjectCard = styled.div`
   }
 `
 
+export const ProjectContainer = styled.div`
+  margin: 0 auto;
+  width: 80%;
+`
+
 export const CardTitle = styled.h3`
   margin: 16px 0 24px;
   color: ${color.fontPrimary};
