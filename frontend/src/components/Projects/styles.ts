@@ -1,6 +1,7 @@
 import { styled } from 'styled-components'
 
 import { breakpoints, color } from '../../styles'
+
 import { slideInLeftTitle, slideInLeftUnderline } from '../../utils/Keyframes'
 
 export const TitleContainer = styled.div`

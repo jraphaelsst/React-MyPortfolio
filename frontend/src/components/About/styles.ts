@@ -66,8 +66,10 @@ export const Icon = styled.div`
   cursor: pointer;
   opacity: 0;
 
-  &:hover {
-    transform: scale(1.15);
+  &.hoverEffect {
+    &:hover {
+      transform: scale(1.15);
+    }
   }
 
   &.fadeInIcon {

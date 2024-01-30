@@ -148,7 +148,7 @@ export const Button = styled.button`
   transition: all 0.3s ease;
 
   &:hover {
-    transform: scale(0.95);
+    transform: scale(0.92);
     background-color: ${color.secondary};
     color: ${color.fontAlternative};
     border-color: ${color.secondary};

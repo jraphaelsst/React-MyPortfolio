@@ -46,6 +46,7 @@ const Projects = () => {
   const [animateUnderlineClass, setAnimateUnderlineClass] = useState('')
 
   useEffect(() => {
+    ;() => {}
     const handleScroll = () => {
       const sectionTitleEl = document.getElementById('projectsSectionTitle')
       const underlineEl = document.getElementById('projectsUnderline')
@@ -53,10 +54,16 @@ const Projects = () => {
       sectionTitleEl && visibleInViewport(sectionTitleEl, true)
         ? setAnimateSectionTitleClass('slideProjectsTitle')
         : setAnimateSectionTitleClass('')
-
       underlineEl && visibleInViewport(underlineEl, true)
         ? setAnimateUnderlineClass('slideProjectsUnderline')
         : setAnimateUnderlineClass('')
+
+      repos.map((repo) => {
+        const idn = document.getElementById(repo.id)
+        idn && visibleInViewport(idn, true)
+          ? idn.classList.add('animate')
+          : idn?.classList.remove('animate')
+      })
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -64,7 +71,7 @@ const Projects = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [repos])
 
   return (
     <Container
@@ -84,6 +91,7 @@ const Projects = () => {
         <ProjectsContainer>
           {repos.map((repo) => (
             <Project
+              id={repo.id}
               key={repo.id}
               name={repo.name.replaceAll('-', ' ')}
               description={repo.description}
