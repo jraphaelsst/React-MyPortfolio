@@ -15,7 +15,7 @@ export const Container = styled.div`
 `
 
 export const Copyright = styled.h4`
-  color: ${color.fontSecondary};
+  color: ${color.bgPrimary};
   font-weight: 400;
 
   span {
@@ -42,23 +42,23 @@ export const Icon = styled.div`
     color: ${color.fontAlternative};
   }
 
-  &:hover {
-    transform: scale(0.9);
-  }
-
   &.slideFooterInIcon {
-    animation: ${fadeInFooterIcon} 1s ease-in-out forwards;
+    animation: ${fadeInFooterIcon} 0.6s ease-in-out forwards;
+
+    &:hover {
+      transform: scale(0.9);
+    }
 
     &:nth-child(1) {
       animation-delay: 0.3s;
     }
 
     &:nth-child(2) {
-      animation-delay: 0.7s;
+      animation-delay: 0.5s;
     }
 
     &:nth-child(3) {
-      animation-delay: 1.1s;
+      animation-delay: 0.7s;
     }
   }
 `

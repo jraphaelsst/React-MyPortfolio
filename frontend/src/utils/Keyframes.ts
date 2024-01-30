@@ -52,3 +52,14 @@ export const slideInLeftUnderline = keyframes`
     opacity: 1;
   }
 `
+
+export const flipIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+`

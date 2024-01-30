@@ -1,4 +1,10 @@
-import { CardDescription, CardTitle, ProjectCard, Tech } from './styles'
+import {
+  CardDescription,
+  CardTitle,
+  ProjectCard,
+  ProjectContainer,
+  Tech
+} from './styles'
 
 type Props = {
   name: string
@@ -16,19 +22,23 @@ const Project = ({ name, description, language, link }: Props) => {
   return (
     <a href={link}>
       <ProjectCard>
-        <div>
-          <CardTitle>
-            {fw2 == 'React' ? nameDone.split(' ').slice(1).join(' ') : nameDone}
-          </CardTitle>
-          <CardDescription>{description}</CardDescription>
-        </div>
-        <Tech>
-          Tech:{' '}
-          <span>
-            {language}, {fw}
-            {fw2 == 'React' ? `, Javascript, ${fw2}` : ''}
-          </span>
-        </Tech>
+        <ProjectContainer>
+          <div>
+            <CardTitle>
+              {fw2 == 'React'
+                ? nameDone.split(' ').slice(1).join(' ')
+                : nameDone}
+            </CardTitle>
+            <CardDescription>{description}</CardDescription>
+          </div>
+          <Tech>
+            Tech:{' '}
+            <span>
+              {language}, {fw}
+              {fw2 == 'React' ? `, Javascript, ${fw2}` : ''}
+            </span>
+          </Tech>
+        </ProjectContainer>
       </ProjectCard>
     </a>
   )

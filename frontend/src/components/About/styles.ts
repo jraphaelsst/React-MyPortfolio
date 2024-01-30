@@ -4,13 +4,17 @@ import { fadeInIcons, fadeInImage, fadeInText } from './keyframes'
 
 import { slideInRightTitle, slideInRightUnderline } from '../../utils/Keyframes'
 
-import { color } from '../../styles'
+import { color, breakpoints } from '../../styles'
 
 export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 85px 0 64px 0;
+  margin: 80px 0 64px 0;
+
+  @media (max-width: ${breakpoints.smartphone}) {
+    margin-top: 180px;
+  }
 `
 
 export const SectionTitle = styled.h1`
@@ -74,11 +78,11 @@ export const Icon = styled.div`
     }
 
     &:nth-child(2) {
-      animation-delay: 0.6s;
+      animation-delay: 0.5s;
     }
 
     &:nth-child(3) {
-      animation-delay: 0.9s;
+      animation-delay: 0.7s;
     }
   }
 `
@@ -90,8 +94,8 @@ export const Image = styled.img`
   opacity: 0;
 
   &.fadeInImage {
-    animation: ${fadeInImage} 1.2s ease-in-out forwards;
-    animation-delay: 0.5s;
+    animation: ${fadeInImage} 0.8s ease-in-out forwards;
+    animation-delay: 0.3s;
   }
 `
 
@@ -102,7 +106,7 @@ export const Title = styled.h2`
   opacity: 0;
 
   &.fadeInAboutTitle {
-    animation: ${fadeInText} 1.5s ease-in-out forwards;
+    animation: ${fadeInText} 1s ease-in-out forwards;
     animation-delay: 0.3s;
   }
 `
@@ -120,17 +124,17 @@ export const Text = styled.p`
   opacity: 0;
 
   &.fadeInFirstText {
-    animation: ${fadeInText} 1.5s ease-in-out forwards;
-    animation-delay: 0.5s;
+    animation: ${fadeInText} 1s ease-in-out forwards;
+    animation-delay: 0.4s;
   }
 
   &.fadeInSecondText {
-    animation: ${fadeInText} 1.5s ease-in-out forwards;
-    animation-delay: 0.8s;
+    animation: ${fadeInText} 1s ease-in-out forwards;
+    animation-delay: 0.5s;
   }
 
   &.fadeInThirdText {
-    animation: ${fadeInText} 1.5s ease-in-out forwards;
-    animation-delay: 1s;
+    animation: ${fadeInText} 1s ease-in-out forwards;
+    animation-delay: 0.6s;
   }
 `

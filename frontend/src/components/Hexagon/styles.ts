@@ -4,6 +4,9 @@ import { color } from '../../styles'
 
 export const Container = styled.div`
   display: flex;
+  position: relative;
+  transform: rotateY(180deg);
+  opacity: 0;
 `
 
 export const Top = styled.div`

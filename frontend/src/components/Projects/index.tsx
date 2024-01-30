@@ -11,63 +11,36 @@ import { color } from '../../styles'
 import visibleInViewport from '../../utils/VisibleInViewport'
 
 import Container from '../Container'
-import Project from '../Project'
+// import Project from '../Project'
 
-type ReposType = {
-  id: string
-  name: string
-  description: string
-  clone_url: string
-  homepage: string
-  language: string
-  languages: string
-  languages_url: string
-}
-
-// type LanguagesType = {
-//   id: number
-//   repos: string
-//   languages: object
-// }
-
-// type LanguageType = {
+// type ReposType = {
+//   id: string
+//   name: string
+//   description: string
+//   clone_url: string
+//   homepage: string
 //   language: string
-//   size: number
+//   languages: string
+//   languages_url: string
 // }
 
 const Projects = () => {
-  const reposUrl = 'https://api.github.com/users/jraphaelsst/repos'
-  // const langUrl = 'https://api.github.com/repos/jraphaelsst/'
+  // const reposUrl = 'https://api.github.com/users/jraphaelsst/repos'
 
-  const [repos, setRepos] = useState<ReposType[]>([])
+  // const [repos, setRepos] = useState<ReposType[]>([])
 
   // Get Repos
-  useEffect(() => {
-    try {
-      fetch(reposUrl)
-        .then((response) => response.json())
-        .then((res) => {
-          setRepos(res)
-        })
-    } catch (err) {
-      console.log(err)
-    }
-  }, [])
-
-  // Fetch Languages
-  // const langs: LanguagesType[] = []
-
-  // repos.map((repo, index) => {
-  //   fetch(langUrl + repo.name + '/languages')
-  //     .then((response) => response.json())
-  //     .then((res) => {
-  //       langs.push({
-  //         id: index,
-  //         repos: repo.name,
-  //         languages: res
+  // useEffect(() => {
+  //   try {
+  //     fetch(reposUrl)
+  //       .then((response) => response.json())
+  //       .then((res) => {
+  //         setRepos(res)
   //       })
-  //     })
-  // })
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }, [])
 
   const [animateSectionTitleClass, setAnimateSectionTitleClass] = useState('')
   const [animateUnderlineClass, setAnimateUnderlineClass] = useState('')
@@ -109,7 +82,7 @@ const Projects = () => {
           <Underline id="projectsUnderline" className={animateUnderlineClass} />
         </TitleContainer>
         <ProjectsContainer>
-          {repos.map((repo) => (
+          {/* {repos.map((repo) => (
             <Project
               key={repo.id}
               name={repo.name.replaceAll('-', ' ')}
@@ -118,7 +91,7 @@ const Projects = () => {
               language={repo.language}
               link={repo.clone_url}
             />
-          ))}
+          ))} */}
         </ProjectsContainer>
       </>
     </Container>

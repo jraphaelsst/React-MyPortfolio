@@ -7,7 +7,7 @@ export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 64px 0 64px 0;
+  margin: 64px 0 24px 0;
 `
 
 export const SectionTitle = styled.h1`
@@ -41,9 +41,9 @@ export const ProjectsContainer = styled.div`
   padding: 8% 8%;
   text-align: center;
   margin-bottom: 48px;
+  justify-items: center;
 
   @media (max-width: ${breakpoints.tablet}) {
     grid-template-columns: 1fr;
-    justify-items: center;
   }
 `

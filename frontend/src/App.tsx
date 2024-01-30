@@ -64,8 +64,10 @@ function App() {
             </SectionTitle>
             <Underline id="topicsUnderline" className={animateUnderlineClass} />
           </TitleContainer>
-          <Topics topic="backend" />
-          <Topics topic="frontend" />
+          <div>
+            <Topics topic="backend" />
+            <Topics topic="frontend" />
+          </div>
         </>
       </Container>
       <Skills />
