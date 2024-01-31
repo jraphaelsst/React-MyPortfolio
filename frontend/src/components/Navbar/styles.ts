@@ -114,6 +114,24 @@ export const LinkAnimation = styled.div`
 
 export const NavMobile = styled.nav`
   display: none;
+  z-index: 100;
+
+  &.is-open {
+    display: block;
+  }
+`
+
+export const Overlay = styled.div`
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 2000px;
+  margin: auto 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 10;
 
   &.is-open {
     display: block;

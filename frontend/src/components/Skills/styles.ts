@@ -60,7 +60,7 @@ export const Languages = styled.div`
   opacity: 0;
 
   &.slideInRight {
-    animation: ${slideInRight} 1s ease forwards;
+    animation: ${slideInRight} 2s ease forwards;
   }
 `
 
@@ -68,7 +68,7 @@ export const Frameworks = styled.div`
   opacity: 0;
 
   &.slideInLeft {
-    animation: ${slideInLeft} 1s ease forwards;
+    animation: ${slideInLeft} 2s ease forwards;
   }
 `
 
