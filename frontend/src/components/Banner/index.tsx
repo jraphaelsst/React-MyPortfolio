@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
 import { ArrowIcon, Button, Container, Content, Name, Text } from './styles'
-import ProgressBar from '../ProgressBar'
 
 const Banner = () => {
   // Scroll Effect on "About-scroll" button click
@@ -29,25 +28,6 @@ const Banner = () => {
     }
   }, [])
 
-  const [value, setValue] = useState(0)
-  const limit = 75
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setValue((oldValue: number) => {
-        const newValue = oldValue + 1
-
-        if (newValue >= limit) {
-          clearInterval(interval)
-        }
-
-        return newValue
-      })
-    }, 50)
-
-    return () => clearInterval(interval)
-  }, [])
-
   return (
     <Container id="banner-section">
       <Content>
@@ -59,10 +39,6 @@ const Banner = () => {
           Know my work <ArrowIcon className="fa-solid fa-arrow-right" />
         </Button>
       </Content>
-      <div>
-        <ProgressBar value={value} max={100} />
-        <span>{value}%</span>
-      </div>
     </Container>
   )
 }

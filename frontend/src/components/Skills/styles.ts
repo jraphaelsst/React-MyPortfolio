@@ -95,7 +95,7 @@ export const Tag = styled.p`
   text-align: left;
 `
 
-export const ProgressBar = styled.div`
+export const ProgressBar1 = styled.div`
   progress[value] {
     appearance: none;
     width: 100%;
