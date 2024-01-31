@@ -131,7 +131,7 @@ export const Overlay = styled.div`
   margin: auto 0;
   background-color: black;
   opacity: 0.5;
-  z-index: 0;
+  z-index: 10;
 
   &.is-open {
     display: block;

@@ -45,7 +45,7 @@ const Skills = () => {
 
         return newValue
       })
-    }, 15)
+    }, 10)
     return () => clearInterval(interval)
   }
   const javascriptProgress = (value: number) => {
@@ -59,7 +59,7 @@ const Skills = () => {
 
         return newValue
       })
-    }, 15)
+    }, 10)
     return () => clearInterval(interval)
   }
   const djangoProgress = (value: number) => {
@@ -73,7 +73,7 @@ const Skills = () => {
 
         return newValue
       })
-    }, 15)
+    }, 10)
     return () => clearInterval(interval)
   }
   const reactProgress = (value: number) => {
@@ -87,7 +87,7 @@ const Skills = () => {
 
         return newValue
       })
-    }, 15)
+    }, 10)
     return () => clearInterval(interval)
   }
 
@@ -146,15 +146,25 @@ const Skills = () => {
     const onLanguagesAnimationEnd = () => {
       const pythonLimit = 85
       const javascriptLimit = 70
-      pythonProgress(pythonLimit)
-      javascriptProgress(javascriptLimit)
+
+      setTimeout(() => {
+        pythonProgress(pythonLimit)
+      }, 100)
+      setTimeout(() => {
+        javascriptProgress(javascriptLimit)
+      }, 500)
     }
 
     const onFrameworksAnimationEnd = () => {
       const djangoLimit = 90
       const reactLimit = 75
-      djangoProgress(djangoLimit)
-      reactProgress(reactLimit)
+
+      setTimeout(() => {
+        djangoProgress(djangoLimit)
+      }, 300)
+      setTimeout(() => {
+        reactProgress(reactLimit)
+      }, 700)
     }
 
     languages?.addEventListener('animationend', onLanguagesAnimationEnd)
