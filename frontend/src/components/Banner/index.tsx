@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 
 import { ArrowIcon, Button, Container, Content, Name, Text } from './styles'
-import ProgressBar from '../ProgressBar'
 
 const Banner = () => {
   // Scroll Effect on "About-scroll" button click
@@ -40,7 +39,6 @@ const Banner = () => {
           Know my work <ArrowIcon className="fa-solid fa-arrow-right" />
         </Button>
       </Content>
-      <ProgressBar />
     </Container>
   )
 }

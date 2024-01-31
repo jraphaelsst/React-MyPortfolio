@@ -1,6 +1,23 @@
 import { styled } from 'styled-components'
 
 import { breakpoints, color } from '../../styles'
+import { slideInLeft, slideInRight } from './keyframes'
+
+export const CardBox = styled.a`
+  opacity: 0;
+
+  &:nth-child(2n + 1) {
+    &.animate {
+      animation: ${slideInRight} 1s ease forwards;
+    }
+  }
+
+  &:nth-child(2n) {
+    &.animate {
+      animation: ${slideInLeft} 1s ease forwards;
+    }
+  }
+`
 
 export const ProjectCard = styled.div`
   border: 1px solid ${color.fontPrimary};

@@ -8,7 +8,6 @@ import {
   Item,
   Items,
   Languages,
-  ProgressBar,
   SectionTitle,
   SkillsContainer,
   SoftSkills,
@@ -19,6 +18,7 @@ import {
 } from './styles'
 
 import Container from '../Container'
+import ProgressBar from '../ProgressBar'
 
 const Skills = () => {
   const [animateSectionTitleClass, setAnimateSectionTitleClass] = useState('')
@@ -29,6 +29,68 @@ const Skills = () => {
   const [animateFrameworksContainerClass, setAnimateFrameworksContainerClass] =
     useState('')
 
+  const [pythonValue, setPythonValue] = useState(0)
+  const [javascriptValue, setJavascriptValue] = useState(0)
+  const [djangoValue, setDjangoValue] = useState(0)
+  const [reactValue, setReactValue] = useState(0)
+
+  const pythonProgress = (value: number) => {
+    const interval = setInterval(() => {
+      setPythonValue((oldValue: number) => {
+        const newValue = oldValue + 1
+
+        if (newValue >= value) {
+          clearInterval(interval)
+        }
+
+        return newValue
+      })
+    }, 15)
+    return () => clearInterval(interval)
+  }
+  const javascriptProgress = (value: number) => {
+    const interval = setInterval(() => {
+      setJavascriptValue((oldValue: number) => {
+        const newValue = oldValue + 1
+
+        if (newValue >= value) {
+          clearInterval(interval)
+        }
+
+        return newValue
+      })
+    }, 15)
+    return () => clearInterval(interval)
+  }
+  const djangoProgress = (value: number) => {
+    const interval = setInterval(() => {
+      setDjangoValue((oldValue: number) => {
+        const newValue = oldValue + 1
+
+        if (newValue >= value) {
+          clearInterval(interval)
+        }
+
+        return newValue
+      })
+    }, 15)
+    return () => clearInterval(interval)
+  }
+  const reactProgress = (value: number) => {
+    const interval = setInterval(() => {
+      setReactValue((oldValue: number) => {
+        const newValue = oldValue + 1
+
+        if (newValue >= value) {
+          clearInterval(interval)
+        }
+
+        return newValue
+      })
+    }, 15)
+    return () => clearInterval(interval)
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       const sectionTitleEl = document.getElementById('skillsSectionTitle')
@@ -36,6 +98,11 @@ const Skills = () => {
 
       const languages = document.getElementById('languagesContainer')
       const frameworks = document.getElementById('frameworksContainer')
+
+      const pythonBar = document.getElementById('pythonBar')
+      const javascriptBar = document.getElementById('javascriptBar')
+      const djangoBar = document.getElementById('djangoBar')
+      const reactBar = document.getElementById('reactBar')
 
       sectionTitleEl && visibleInViewport(sectionTitleEl, true)
         ? setAnimateSectionTitleClass('slideSkillsTitle')
@@ -50,12 +117,52 @@ const Skills = () => {
       frameworks && visibleInViewport(frameworks, true)
         ? setAnimateFrameworksContainerClass('slideInLeft')
         : setAnimateFrameworksContainerClass('')
+
+      if (pythonBar && !visibleInViewport(pythonBar, true)) {
+        setPythonValue(0)
+      }
+      if (javascriptBar && !visibleInViewport(javascriptBar, true)) {
+        setJavascriptValue(0)
+      }
+      if (djangoBar && !visibleInViewport(djangoBar, true)) {
+        setDjangoValue(0)
+      }
+      if (reactBar && !visibleInViewport(reactBar, true)) {
+        setReactValue(0)
+      }
     }
 
     window.addEventListener('scroll', handleScroll)
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  useEffect(() => {
+    const languages = document.getElementById('languagesContainer')
+    const frameworks = document.getElementById('frameworksContainer')
+
+    const onLanguagesAnimationEnd = () => {
+      const pythonLimit = 85
+      const javascriptLimit = 70
+      pythonProgress(pythonLimit)
+      javascriptProgress(javascriptLimit)
+    }
+
+    const onFrameworksAnimationEnd = () => {
+      const djangoLimit = 90
+      const reactLimit = 75
+      djangoProgress(djangoLimit)
+      reactProgress(reactLimit)
+    }
+
+    languages?.addEventListener('animationend', onLanguagesAnimationEnd)
+    frameworks?.addEventListener('animationend', onFrameworksAnimationEnd)
+
+    return () => {
+      languages?.removeEventListener('animationend', onLanguagesAnimationEnd)
+      frameworks?.removeEventListener('animationend', onFrameworksAnimationEnd)
     }
   }, [])
 
@@ -83,17 +190,11 @@ const Skills = () => {
             <Items>
               <Item>
                 <Tag id="pythonTitle">Python</Tag>
-                <ProgressBar>
-                  <progress value="85" max="100" />
-                  <span>85%</span>
-                </ProgressBar>
+                <ProgressBar value={pythonValue} id="pythonBar" />
               </Item>
               <Item>
                 <Tag id="javascriptTitle">Javascript</Tag>
-                <ProgressBar>
-                  <progress value="70" max="100" />
-                  <span>70%</span>
-                </ProgressBar>
+                <ProgressBar value={javascriptValue} id="javascriptBar" />
               </Item>
             </Items>
           </Languages>
@@ -105,17 +206,11 @@ const Skills = () => {
             <Items>
               <Item>
                 <Tag id="djangoTitle">Django Rest Framework</Tag>
-                <ProgressBar>
-                  <progress value="90" max="100" />
-                  <span>90%</span>
-                </ProgressBar>
+                <ProgressBar value={djangoValue} id="djangoBar" />
               </Item>
               <Item>
                 <Tag id="reactTitle">React.js</Tag>
-                <ProgressBar>
-                  <progress value="75" max="100" />
-                  <span>75%</span>
-                </ProgressBar>
+                <ProgressBar value={reactValue} id="reactBar" />
               </Item>
             </Items>
           </Frameworks>

@@ -43,6 +43,7 @@ const About = () => {
   const [animateSectionTitleClass, setAnimateSectionTitleClass] = useState('')
   const [animateUnderlineClass, setAnimateUnderlineClass] = useState('')
 
+  // Header States
   const [animateImageClass, setAnimateImageClass] = useState('')
   const [animateIconClass, setAnimateIconClass] = useState('')
   const [animateTitleClass, setAnimateTitleClass] = useState('')

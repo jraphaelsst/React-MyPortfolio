@@ -1,4 +1,5 @@
 import {
+  CardBox,
   CardDescription,
   CardTitle,
   ProjectCard,
@@ -7,6 +8,7 @@ import {
 } from './styles'
 
 type Props = {
+  id: string
   name: string
   description: string
   homepage: string
@@ -14,13 +16,13 @@ type Props = {
   language: string
 }
 
-const Project = ({ name, description, language, link }: Props) => {
+const Project = ({ id, name, description, language, link }: Props) => {
   const fw = name.split(' ')[0]
   const fw2 = name.split(' ')[1]
   const nameDone = name.split(' ').slice(1).join(' ')
 
   return (
-    <a href={link}>
+    <CardBox href={link} id={id}>
       <ProjectCard>
         <ProjectContainer>
           <div>
@@ -40,7 +42,7 @@ const Project = ({ name, description, language, link }: Props) => {
           </Tech>
         </ProjectContainer>
       </ProjectCard>
-    </a>
+    </CardBox>
   )
 }
 
