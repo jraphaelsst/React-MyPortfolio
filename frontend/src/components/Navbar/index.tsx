@@ -7,7 +7,8 @@ import {
   Links,
   NavHeader,
   NavMobile,
-  NavRow
+  NavRow,
+  Overlay
 } from './styles'
 
 const Navbar = () => {
@@ -104,63 +105,71 @@ const Navbar = () => {
   }
 
   return (
-    <NavHeader className={`${stickyClass}`}>
-      <NavRow>
-        <Hamburguer
-          id="hamburguer"
-          onClick={() => {
-            setIsMenuOpen(!isMenuOpen)
-          }}
-          className={isMenuOpen ? 'is-open' : ''}
-        >
-          <span />
-          <span />
-          <span />
-        </Hamburguer>
-        <Links>
-          <Link onClick={scrollBanner}>
-            <LinkAnimation>Home</LinkAnimation>
-          </Link>
-          <Link onClick={scrollAbout}>
-            <LinkAnimation>About</LinkAnimation>
-          </Link>
-          <Link onClick={scrollWork}>
-            <LinkAnimation>My Work</LinkAnimation>
-          </Link>
-          <Link onClick={scrollSkills}>
-            <LinkAnimation>Skills</LinkAnimation>
-          </Link>
-          <Link onClick={scrollProjects}>
-            <LinkAnimation>Projects</LinkAnimation>
-          </Link>
-          <Link onClick={scrollContact}>
-            <LinkAnimation>Contact</LinkAnimation>
-          </Link>
-        </Links>
-      </NavRow>
-      <NavMobile id="nav-mobile" className={isMenuOpen ? 'is-open' : ''}>
-        <Links>
-          <Link onClick={scrollBanner}>
-            <LinkAnimation>Home</LinkAnimation>
-          </Link>
-          <Link onClick={scrollAbout}>
-            <LinkAnimation>About</LinkAnimation>
-          </Link>
-          <Link onClick={scrollWork}>
-            <LinkAnimation>My Work</LinkAnimation>
-          </Link>
-          <Link onClick={scrollSkills}>
-            <LinkAnimation>Skills</LinkAnimation>
-          </Link>
-          <Link onClick={scrollProjects}>
-            <LinkAnimation>Projects</LinkAnimation>
-          </Link>
-          <Link onClick={scrollContact}>
-            <LinkAnimation>Contact</LinkAnimation>
-          </Link>
-        </Links>
-      </NavMobile>
-    </NavHeader>
+    <>
+      <NavHeader className={`${stickyClass}`}>
+        <NavRow>
+          <Hamburguer
+            id="hamburguer"
+            onClick={() => {
+              setIsMenuOpen(!isMenuOpen)
+            }}
+            className={isMenuOpen ? 'is-open' : ''}
+          >
+            <span />
+            <span />
+            <span />
+          </Hamburguer>
+          <Links>
+            <Link onClick={scrollBanner}>
+              <LinkAnimation>Home</LinkAnimation>
+            </Link>
+            <Link onClick={scrollAbout}>
+              <LinkAnimation>About</LinkAnimation>
+            </Link>
+            <Link onClick={scrollWork}>
+              <LinkAnimation>My Work</LinkAnimation>
+            </Link>
+            <Link onClick={scrollSkills}>
+              <LinkAnimation>Skills</LinkAnimation>
+            </Link>
+            <Link onClick={scrollProjects}>
+              <LinkAnimation>Projects</LinkAnimation>
+            </Link>
+            <Link onClick={scrollContact}>
+              <LinkAnimation>Contact</LinkAnimation>
+            </Link>
+          </Links>
+        </NavRow>
+        <NavMobile id="nav-mobile" className={isMenuOpen ? 'is-open' : ''}>
+          <Links>
+            <Link onClick={scrollBanner}>
+              <LinkAnimation>Home</LinkAnimation>
+            </Link>
+            <Link onClick={scrollAbout}>
+              <LinkAnimation>About</LinkAnimation>
+            </Link>
+            <Link onClick={scrollWork}>
+              <LinkAnimation>My Work</LinkAnimation>
+            </Link>
+            <Link onClick={scrollSkills}>
+              <LinkAnimation>Skills</LinkAnimation>
+            </Link>
+            <Link onClick={scrollProjects}>
+              <LinkAnimation>Projects</LinkAnimation>
+            </Link>
+            <Link onClick={scrollContact}>
+              <LinkAnimation>Contact</LinkAnimation>
+            </Link>
+          </Links>
+        </NavMobile>
+      </NavHeader>
+      <Overlay
+        className={isMenuOpen ? 'is-open' : ''}
+        onClick={() => {
+          setIsMenuOpen(false)
+        }}
+      />
+    </>
   )
 }
 
