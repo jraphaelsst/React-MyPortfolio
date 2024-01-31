@@ -13,7 +13,7 @@ export const TitleContainer = styled.div`
   margin: 80px 0 64px 0;
 
   @media (max-width: ${breakpoints.smartphone}) {
-    margin-top: 180px;
+    margin-top: 220px;
   }
 `
 
